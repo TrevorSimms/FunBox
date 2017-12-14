@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+<personalDetails><firstName>John</firstName><lastName>Smith</lastName><age>35</age><sex>Male</sex></personalDetails><accountInfo><username>jsmith35</username><email>jsmith@example.org</email><pswd>obeyhats</pswd><bullcrap>on</bullcrap></accountInfo></profile>
