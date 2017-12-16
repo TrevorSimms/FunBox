@@ -2,8 +2,10 @@
 session_start();
 include './phpData/MyFunctional.php';
 include './phpData/config.php';
-parsePost();
-$usernameExists = addAccount();
+$recMetaHndl = new metaHandler();
+$recAccountHlnd = new accountHlnd();
+$recMetaHndl->parsePost();
+$usernameExists = $recAccountHlnd->addAccount();
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +23,8 @@ $usernameExists = addAccount();
       <h2>Welcome, <?php echo $_POST["nausername"]; ?>, to our bullcrap!</h2>
       <p>
         Hope you have a good <?php
-        echo ($_POST["naage"] + 1) . RightEnding($_POST["naage"]); ?> birthday!
+        echo ($_POST["naage"] + 1) . $recMetaHndl->RightEnding($_POST["naage"]);
+        ?> birthday!
       </p>
       <p>Login to access your account.</p>
       <?php } else { ?>

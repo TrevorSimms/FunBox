@@ -2,8 +2,10 @@
 session_start();
 include './phpData/config.php';
 include './phpData/MyFunctional.php';
-parsePost();
-$wrongPassword = getAccount();
+$getMetaHndl = new metaHandler();
+$getAccountHlnd = new accountHlnd();
+$getMetaHndl->parsePost();
+$wrongPassword = $getAccountHlnd->getAccount();
  ?>
 <!DOCTYPE html>
 <html>
